@@ -1,8 +1,8 @@
 function AboutPage() {
 	return (
-		<section className="about">
+		<section className="about-page">
 			<h1>About Me</h1>
-			<p>I am a passionate web developer...</p>
+			<p>This is the About Page where I share my story...</p>
 		</section>
 	);
 }

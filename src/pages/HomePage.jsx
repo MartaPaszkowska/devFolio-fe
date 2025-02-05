@@ -5,12 +5,12 @@ import ContactSection from "../components/ContactSection";
 
 function HomePage() {
 	return (
-		<div>
+		<>
 			<HeroSection />
 			<AboutSection />
 			<ProjectsSection />
 			<ContactSection />
-		</div>
+		</>
 	);
 }
 
