@@ -1,6 +1,6 @@
 .header {
 	display: flex;
-	justify-content: flex-end; /* Przesunięcie nawigacji na prawą stronę */
+	justify-content: space-between;
 	align-items: center;
 	background-color: #000; /* Czarne tło */
 	color: #ccc; /* Jasnoszary kolor tekstu */
@@ -12,6 +12,8 @@
 	z-index: 1000;
 	height: 60px;
 }
+
+/* Styl dla logo */
 .logo {
 	font-size: 1.5rem;
 	font-weight: bold;
