@@ -1,5 +1,6 @@
 import "../styles/Header.css";
 import { HashLink } from "react-router-hash-link";
+import menuIcon from "../assets/svg/menu.svg";
 
 function Header() {
 	return (
@@ -22,6 +23,9 @@ function Header() {
 					Contact
 				</HashLink>
 			</nav>
+			<button className="menu-button" aria-label="Open menu">
+				<img src={menuIcon} alt="Menu" />
+			</button>
 		</header>
 	);
 }

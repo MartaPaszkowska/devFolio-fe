@@ -1,10 +1,9 @@
 .header {
 	display: flex;
-	justify-content: flex-end; /* Przesunięcie nawigacji na prawą stronę */
+	justify-content: space-between;
 	align-items: center;
-	background-color: #000; /* Czarne tło */
-	color: #ccc; /* Jasnoszary kolor tekstu */
-	padding: 10px 20px;
+	background-color: #000;
+	padding: 10px 50px;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -12,6 +11,8 @@
 	z-index: 1000;
 	height: 60px;
 }
+
+/* Logo */
 .logo {
 	font-size: 1.5rem;
 	font-weight: bold;
@@ -20,11 +21,11 @@
 }
 
 .dev {
-	color: #fff; /* Biały kolor dla "Dev" */
+	color: #fff;
 }
 
 .folio {
-	color: #007bff; /* Niebieski kolor dla "Folio" */
+	color: #007bff;
 }
 
 /* Nawigacja */
@@ -33,7 +34,7 @@
 	gap: 20px;
 }
 
-/* Styl linków */
+/* Linki */
 .nav a {
 	color: #7a878d;
 	text-decoration: none;
@@ -44,4 +45,28 @@
 /* Efekt hover */
 .nav a:hover {
 	color: #007bff;
+}
+
+/* Przycisk menu */
+.menu-button {
+	display: none; /* Ukryte domyślnie */
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+/* Wyświetlanie przycisku menu na tabletach */
+@media (max-width: 1024px) {
+	.nav {
+		display: none; /* Ukrycie nawigacji */
+	}
+
+	.menu-button {
+		display: block; /* Wyświetlenie przycisku menu */
+	}
+
+	.menu-button img {
+		width: 24px;
+		height: 24px;
+	}
 }

@@ -1,3 +1,8 @@
+.contact {
+	background-color: #000;
+	color: #7a878d;
+}
+
 .contact form {
 	display: flex;
 	flex-direction: column;
