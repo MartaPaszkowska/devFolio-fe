@@ -4,9 +4,8 @@ function HeroSection() {
 	return (
 		<section className="hero">
 			<p>Hello world!</p>
-			<p>I'm Marta</p>
-			<p>Paszkowska</p>
-			<p>Developer</p>
+			<h1>Najbardziej na swiiecie kocham moje córeczki :D</h1>
+
 			<button>Hire Me</button>
 			<button>Download Resume</button>
 		</section>
