@@ -1,14 +1,22 @@
 import "../styles/Header.css";
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 function Header() {
 	return (
 		<header className="header">
 			<nav className="nav">
-				<Link to="/#hero">Home</Link>
-				<Link to="/#about">About</Link>
-				<Link to="/#projects">Projects</Link>
-				<Link to="/#contact">Contact</Link>
+				<HashLink smooth to="/#hero">
+					Home
+				</HashLink>
+				<HashLink smooth to="/#about">
+					About
+				</HashLink>
+				<HashLink smooth to="/#projects">
+					Projects
+				</HashLink>
+				<HashLink smooth to="/#contact">
+					Contact
+				</HashLink>
 			</nav>
 		</header>
 	);
