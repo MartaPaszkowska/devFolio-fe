@@ -1,8 +1,15 @@
 import "../styles/Header.css";
+import { useState } from "react";
+import SideMenu from "./SideMenu";
 import { HashLink } from "react-router-hash-link";
 import menuIcon from "../assets/svg/menu.svg";
 
 function Header() {
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+	const toggleMenu = () => {
+		setIsMenuOpen(!isMenuOpen);
+	};
 	return (
 		<header className="header">
 			<div className="logo">
@@ -23,9 +30,14 @@ function Header() {
 					Contact
 				</HashLink>
 			</nav>
-			<button className="menu-button" aria-label="Open menu">
-				<img src={menuIcon} alt="Menu" />
+			<button
+				className="menu-button"
+				onClick={toggleMenu}
+				aria-label="Open menu"
+			>
+				<img src={menuIcon} className="menu-icon" alt="Menu" />
 			</button>
+			<SideMenu isOpen={isMenuOpen} onClose={toggleMenu} />
 		</header>
 	);
 }

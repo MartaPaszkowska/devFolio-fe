@@ -18,30 +18,17 @@
 	right: 0;
 }
 
-/* Styl linków */
 .side-menu a {
 	color: var(--gray);
 	text-decoration: none;
 	font-size: 1.2rem;
-	transition: color 0.3s ease;
 }
 
-/* Efekt hover */
-.side-menu a:hover {
-	color: var(--baseColor); /* Podświetlenie na niebiesko */
-}
-
-/* Przycisk zamykający */
 .close-button {
 	background: none;
 	border: none;
+	color: var(--baseColor);
+	font-size: 1.5rem;
 	align-self: flex-end;
 	cursor: pointer;
-	margin-bottom: 20px;
-}
-
-.close-button img {
-	width: 24px;
-	height: 24px;
-	filter: invert(100%); /* Biały kolor ikony */
 }
