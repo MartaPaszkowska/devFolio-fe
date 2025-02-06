@@ -1,6 +1,6 @@
 .contact {
 	background-color: #000;
-	color: #7a878d;
+	color: var(--gray);
 }
 
 .contact form {
@@ -22,7 +22,7 @@
 	padding: 10px;
 	font-size: 1rem;
 	color: white;
-	background: #007bff;
+	background: var(--baseColor);
 	border: none;
 	border-radius: 5px;
 	font-weight: bold;
@@ -30,5 +30,5 @@
 }
 
 .contact button:hover {
-	background: #0056b3;
+	background: var(--baseColor);
 }

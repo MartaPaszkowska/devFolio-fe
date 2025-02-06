@@ -1,3 +1,8 @@
+:root {
+	--baseColor: #007bff;
+	--gray: #7a878d;
+}
+
 * {
 	margin: 0;
 	padding: 0;

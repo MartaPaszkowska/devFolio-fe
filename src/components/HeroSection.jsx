@@ -3,9 +3,12 @@ import "../styles/HeroSection.css";
 function HeroSection() {
 	return (
 		<section className="hero">
-			<h1>Hi, I'm Marta Paszkowska</h1>
-			<p>a full stack developer</p>
-			<button>Contact Me</button>
+			<p>Hello world!</p>
+			<p>I'm Marta</p>
+			<p>Paszkowska</p>
+			<p>Developer</p>
+			<button>Hire Me</button>
+			<button>Download Resume</button>
 		</section>
 	);
 }
