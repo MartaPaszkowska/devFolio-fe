@@ -71,13 +71,6 @@
 	font-weight: 600;
 }
 
-/* Efekt hover */
-.designer-button:hover,
-.download-button:hover {
-	background: #e0e0e0;
-	color: var(--baseColor);
-}
-
 /* Sekcja scroll */
 .scroll {
 	margin-top: 40px;
