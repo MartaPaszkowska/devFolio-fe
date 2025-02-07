@@ -4,7 +4,7 @@
 	right: -250px;
 	width: 250px;
 	height: 100%;
-	background-color: rgba(0, 0, 0, 0.9); /* Transparentne tło */
+	background-color: rgba(0, 0, 0, 0.9);
 	color: var(--gray);
 	display: flex;
 	flex-direction: column;

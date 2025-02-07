@@ -1,18 +1,39 @@
+import { HashLink } from "react-router-hash-link";
 import "../styles/HeroSection.css";
 import profileImage from "../assets/images/CVzdjecie.jpg";
+import reactIcon from "../assets/svg/react.svg";
+import resumeFile from "../assets/pdf/Marta_PaszkowskaCV_-_PL.pdf";
+import scrollIcon from "../assets/svg/arrow-down.svg";
 
-function HeroSection() {
+function HeroSection(onClose) {
 	return (
 		<section className="hero">
-			<p>Hello world!</p>
 			<div className="hero-image-container">
 				<div className="image-glow"></div>
 				<img src={profileImage} alt="Marta" className="hero-image" />
 			</div>
-			<h1>My name is Marta. I'm a developer specializing in React.</h1>
+			<h1>
+				My name is Marta.<br></br> I'm a developer specializing in{" "}
+				<img src={reactIcon} alt="React" /> React.
+			</h1>
+			<div className="buttons">
+				<HashLink
+					smooth
+					to="/#designer"
+					onClick={onClose}
+					className="designer-button"
+				>
+					For Designer
+				</HashLink>
 
-			<button>Hire Me</button>
-			<button>Download Resume</button>
+				<a href={resumeFile} download className="download-button">
+					Download Resume
+				</a>
+			</div>
+			<div className="scroll">
+				<p>scroll down</p>
+				<img src={scrollIcon} alt="arrow-down" class="bouncing-arrow" />
+			</div>
 		</section>
 	);
 }

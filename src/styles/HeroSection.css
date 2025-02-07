@@ -1,9 +1,9 @@
 .hero {
+	margin-top: 50px;
 	text-align: center;
 	padding: 40px 20px;
 	background-color: #000;
 	color: var(--gray);
-	border-radius: 10px;
 }
 
 /* Kontener dla zdjęcia i poświaty */
@@ -38,6 +38,7 @@
 
 .hero h1 {
 	font-size: 1.8rem;
+	font-weight: 400;
 	margin-bottom: 10px;
 }
 
@@ -46,18 +47,56 @@
 	color: var(--gray);
 }
 
-.hero button {
-	margin-top: 15px;
-	padding: 10px 20px;
-	font-size: 1rem;
-	color: var(--baseColor);
-	background: white;
-	border: none;
-	border-radius: 5px;
-	font-weight: bold;
-	transition: background 0.3s;
+.buttons {
+	margin-top: 40px;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
 }
 
-.hero button:hover {
+/* Styl dla przycisków */
+.designer-button,
+.download-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 5px 10px;
+	font-size: 1.2rem;
+	background: var(--baseColor);
+	color: #e0e0e0;
+	border: none;
+	border-radius: 30px;
+	text-decoration: none;
+	width: 400px;
+	font-weight: 600;
+}
+
+/* Efekt hover */
+.designer-button:hover,
+.download-button:hover {
 	background: #e0e0e0;
+	color: var(--baseColor);
+}
+
+/* Sekcja scroll */
+.scroll {
+	margin-top: 40px;
+	position: relative;
+	text-align: center;
+}
+
+.bouncing-arrow {
+	margin-top: 20px;
+	animation: bounceArrow 1.5s infinite ease-in-out;
+}
+
+/* Animacja skakania strzałki */
+@keyframes bounceArrow {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-20px); /* Podskok o 20px */
+	}
 }
