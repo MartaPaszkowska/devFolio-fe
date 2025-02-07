@@ -2,11 +2,14 @@
 	text-align: center;
 	padding: 20px;
 	background-color: #000;
-	color: var(--gray);
-	border-radius: 10px;
+
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
+.about h2 {
+	font-size: 1.8rem;
+	font-weight: 400;
+}
 .about p {
 	font-size: 1rem;
+	letter-spacing: 0.8px;
 }
