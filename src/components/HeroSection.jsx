@@ -1,7 +1,7 @@
 import { HashLink } from "react-router-hash-link";
 import "../styles/HeroSection.css";
 import profileImage from "../assets/images/CVzdjecie.jpg";
-import reactIcon from "../assets/svg/react.svg";
+import reactIcon from "../assets/svg/technologis/reactIcon.svg";
 import resumeFile from "../assets/pdf/Marta_PaszkowskaCV_-_PL.pdf";
 import scrollIcon from "../assets/svg/arrow-down.svg";
 
@@ -12,6 +12,7 @@ function HeroSection(onClose) {
 				<div className="image-glow"></div>
 				<img src={profileImage} alt="Marta" className="hero-image" />
 			</div>
+			<p>Hello World!</p>
 			<h1>
 				My name is Marta.<br></br> I'm a developer specializing in{" "}
 				<img src={reactIcon} alt="React" /> React.

@@ -1,5 +1,6 @@
 import HeroSection from "../components/HeroSection";
 import AboutSection from "../components/AboutSection";
+import TechnologisSection from "../components/TechnologisSection";
 import ProjectsSection from "../components/ProjectsSection";
 import DesignerSection from "../components/DesignerSection";
 import ContactSection from "../components/ContactSection";
@@ -12,6 +13,9 @@ function HomePage() {
 			</section>
 			<section id="about">
 				<AboutSection />
+			</section>
+			<section id="about">
+				<TechnologisSection />
 			</section>
 			<section id="projects">
 				<ProjectsSection />
