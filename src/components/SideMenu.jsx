@@ -16,7 +16,7 @@ function SideMenu({ isOpen, onClose }) {
 				Home
 			</HashLink>
 			<HashLink smooth to="/#about" onClick={onClose}>
-				About
+				About Me
 			</HashLink>
 			<HashLink smooth to="/#projects" onClick={onClose}>
 				Projects

@@ -1,20 +1,97 @@
 .projects {
-	padding: 20px;
-	background-color: #000;
-	color: var(--gray);
-	border-radius: 10px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.project-list {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
+	text-align: center;
+	border-radius: 8px;
+	background-color: #000;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.projects h2 {
+	font-size: 1.8rem;
+	font-weight: 400;
+}
+.project-list {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
 }
 
 .project-item {
-	background: #e0e0e0;
+	background: #1a1934;
 	padding: 20px;
-	border-radius: 8px;
+	border-radius: 25px;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.project-image {
+	width: 100%;
+	height: auto;
+	border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+	.project-image {
+		display: none;
+	}
+}
+
+.project-title {
+	font-size: 1.5rem;
+	color: var(--baseColor);
+}
+
+.project-subtitle {
+	font-size: 1.2rem;
+	color: var(--gray);
+}
+
+.project-description {
+	font-size: 1rem;
+	text-align: start;
+	letter-spacing: 0.8px;
+}
+
+.project-links {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	flex-wrap: wrap;
+}
+
+.project-link {
+	text-decoration: none;
+	color: var(--baseColor);
+	padding: 10px 20px;
+	background-color: #fff;
+	border-radius: 25px;
+	font-weight: bold;
 	text-align: center;
+	transition: background-color 0.3s;
+	width: 150px;
+}
+
+.project-link:hover {
+	background-color: var(--baseColor);
+	color: #fff;
+}
+
+/* Styl dla wersji mobilnej */
+@media (max-width: 768px) {
+	.project-item {
+		text-align: center;
+	}
+
+	.project-links {
+		flex-direction: column;
+		gap: 15px;
+	}
+
+	.project-link {
+		width: 200px;
+	}
 }

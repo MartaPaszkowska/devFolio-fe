@@ -1,0 +1,18 @@
+.read-more-text {
+	font-size: 16px;
+	color: #fff;
+}
+
+.read-more-button {
+	margin-top: 5px;
+	color: var(--baseColor);
+	background: none;
+	border: none;
+	font-weight: bold;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.read-more-button:hover {
+	color: #007bff;
+}
