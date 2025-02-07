@@ -6,7 +6,7 @@
 	border-radius: 10px;
 }
 
-/* Kontener zdjęcia */
+/* Kontener dla zdjęcia i poświaty */
 .hero-image-container {
 	position: relative;
 	display: inline-block;
@@ -24,28 +24,16 @@
 	z-index: 1;
 }
 
-/* Punkt światła */
+/* Poświata za zdjęciem */
 .image-glow {
 	position: absolute;
-	top: 0;
-	left: 50%;
-	width: 12px;
-	height: 12px;
-	background: rgba(0, 123, 255, 1);
+	top: 0px;
+	left: 10px;
+	width: 150px;
+	height: 150px;
 	border-radius: 50%;
-	transform: translate(-50%, -50%);
-	box-shadow: 0 0 15px rgba(0, 123, 255, 0.8);
-	animation: spin-around 3s linear infinite;
-}
-
-/* Animacja obrotu */
-@keyframes spin-around {
-	from {
-		transform: translate(-50%, -50%) rotate(0deg) translateX(70px);
-	}
-	to {
-		transform: translate(-50%, -50%) rotate(360deg) translateX(70px);
-	}
+	background: rgba(0, 123, 255, 0.6);
+	box-shadow: 0 0 15px 10px rgba(0, 123, 255, 0.5);
 }
 
 .hero h1 {
