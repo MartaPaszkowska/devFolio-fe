@@ -10,7 +10,7 @@ function ReadMore({ text, maxLength = 100 }) {
 		<div className="read-more-text">
 			<p>{isExpanded ? text : text.substring(0, maxLength) + "..."}</p>
 			<button onClick={toggleReadMore} className="read-more-button">
-				{isExpanded ? "Czytaj mniej" : "Czytaj więcej"}
+				{isExpanded ? "Read less" : "Read more"}
 			</button>
 		</div>
 	);
