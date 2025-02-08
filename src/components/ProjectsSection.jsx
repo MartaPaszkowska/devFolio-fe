@@ -6,6 +6,7 @@ import "../styles/ProjectsSection.css";
 function ProjectsSection() {
 	return (
 		<section className="projects">
+			<h2>Projects</h2>
 			{projects.map((project, index) => (
 				<div key={index} className="project-item">
 					<h2>{project.title}</h2>
@@ -32,6 +33,11 @@ function ProjectsSection() {
 							GitHub
 						</a>
 					</div>
+					<img
+						src={project.image}
+						alt={project.title}
+						className="project-image"
+					/>
 				</div>
 			))}
 		</section>

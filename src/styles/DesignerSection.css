@@ -1,0 +1,15 @@
+.desiner {
+	text-align: center;
+	padding: 20px;
+	background-color: #000;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	margin-top: 40px;
+}
+.desiner h2 {
+	font-size: 1.8rem;
+	font-weight: 400;
+}
+.desiner p {
+	font-size: 1rem;
+	letter-spacing: 0.8px;
+}
