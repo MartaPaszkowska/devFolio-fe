@@ -9,29 +9,34 @@ function ProjectsSection() {
 			<h2>Projects</h2>
 			{projects.map((project, index) => (
 				<div key={index} className="project-item">
-					<h2>{project.title}</h2>
-					<p>
-						<strong>Technologies:</strong>{" "}
-						{project.technologies.join(", ")}
-					</p>
-					<ReadMore text={project.description} maxLength={150} />
-					<div className="project-links">
-						<a
-							href={project.liveLink}
-							target="_blank"
-							rel="noopener noreferrer"
-							className="project-link"
-						>
-							Live version
-						</a>
-						<a
-							href={project.githubLink}
-							target="_blank"
-							rel="noopener noreferrer"
-							className="project-link"
-						>
-							GitHub
-						</a>
+					<div className="project-content">
+						<h2 className="project-title">{project.title}</h2>
+						<p className="project-technologies">
+							Technologies: {project.technologies.join(", ")}
+						</p>
+						<ReadMore
+							text={project.description}
+							maxLength={150}
+							className="project-description"
+						/>
+						<div className="project-links">
+							<a
+								href={project.liveLink}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="project-link"
+							>
+								Live version
+							</a>
+							<a
+								href={project.githubLink}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="project-link"
+							>
+								GitHub
+							</a>
+						</div>
 					</div>
 					<img
 						src={project.image}

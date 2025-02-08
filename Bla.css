@@ -1,89 +1,69 @@
-.projects {
+.project-item {
 	display: flex;
-	flex-direction: column;
-	gap: 10px;
-	text-align: center;
-	border-radius: 8px;
-	background-color: #000;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-.projects h2 {
-	font-size: 1.8rem;
-	font-weight: 400;
-}
-.project-containet {
-	display: flex;
-	flex-direction: row;
-	gap: 10px;
-}
-.project-list {
-	display: flex;
-	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
 	gap: 20px;
+	background: #1a1934;
+	padding: 20px;
+	border-radius: 25px;
+	color: #fff;
+	max-width: 100%;
 }
 
-.project-image {
-	width: 100%;
-	height: auto;
-	border-radius: 5px;
-}
-
-@media (max-width: 768px) {
-	.project-image {
-		display: none;
-	}
+.project-content {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	gap: 10px;
 }
 
 .project-title {
-	font-size: 1.5rem;
-	color: var(--baseColor);
+	font-size: 1.8rem;
+	font-weight: bold;
+	margin-bottom: 10px;
 }
 
-.project-subtitle {
-	font-size: 1.2rem;
-	color: var(--gray);
+.project-technologies {
+	font-style: italic;
+	color: #b0b0b0;
+	margin-bottom: 15px;
 }
 
 .project-description {
-	font-size: 1rem;
-	text-align: start;
-	letter-spacing: 0.8px;
+	line-height: 1.5;
+	margin-bottom: 20px;
 }
 
 .project-links {
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 10px;
-	flex-wrap: wrap;
+	gap: 15px;
 }
 
 .project-link {
+	background: #007bff;
+	color: white;
 	text-decoration: none;
-	color: var(--baseColor);
 	padding: 10px 20px;
-	background-color: #fff;
-	border-radius: 25px;
+	border-radius: 8px;
 	font-weight: bold;
 	text-align: center;
-	transition: background-color 0.3s;
-	width: 150px;
 }
 
-.project-link:hover {
-	background-color: var(--baseColor);
-	color: #fff;
+.project-image {
+	width: 300px;
+	height: auto;
+	border-radius: 10px;
+	object-fit: cover;
 }
-
-/* Styl dla wersji mobilnej */
 
 @media (max-width: 768px) {
-	.project-links {
+	.project-item {
 		flex-direction: column;
-		gap: 15px;
+		text-align: center;
 	}
 
-	.project-link {
-		width: 200px;
+	.project-image {
+		display: none;
 	}
 }
