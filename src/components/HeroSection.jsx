@@ -1,8 +1,8 @@
 import { HashLink } from "react-router-hash-link";
 import "../styles/HeroSection.css";
-import profileImage from "../assets/images/CVzdjecie.jpg";
+import profileImage from "../../public/assets/images/CVzdjecie.jpg";
 import reactIcon from "../assets/svg/technologis/reactIcon.svg";
-import resumeFile from "../assets/pdf/Marta_PaszkowskaCV_-_PL.pdf";
+import resumeFile from "../../public/assets/pdf/Marta_PaszkowskaCV_-_PL.pdf";
 import scrollIcon from "../assets/svg/arrow-down.svg";
 
 function HeroSection(onClose) {

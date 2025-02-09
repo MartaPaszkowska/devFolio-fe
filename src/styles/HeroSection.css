@@ -2,7 +2,10 @@
 	margin-top: 50px;
 	text-align: center;
 	padding: 40px 20px;
-	background-color: #000;
+	background-color: url("../../public/assets/images/ORSD620.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+
 	color: var(--gray);
 }
 

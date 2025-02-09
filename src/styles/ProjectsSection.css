@@ -11,12 +11,13 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	gap: 20px;
+	gap: 80px;
 	background: #1a1934;
 	padding: 20px;
 	border-radius: 25px;
 	color: #fff;
 	max-width: 100%;
+	text-align: left;
 }
 
 .project-content {
@@ -48,6 +49,7 @@
 .project-links {
 	display: flex;
 	gap: 15px;
+	margin-top: 20px;
 }
 
 .project-link {
@@ -61,14 +63,19 @@
 }
 
 .project-image {
-	width: 300px;
-	height: auto;
+	width: auto;
+	height: 300px;
 	border-radius: 10px;
 	object-fit: cover;
 }
 
 @media (max-width: 768px) {
-	.project-item {
+	.project-title
+		.project-link
+		.project-description
+		.project-technologies
+		.project-content
+		.project-item {
 		flex-direction: column;
 		text-align: center;
 	}
