@@ -1,12 +1,40 @@
 .contact {
-	background-color: #000;
-	color: var(--gray);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 40px;
+}
+.contact h2 {
+	font-size: 1.8rem;
+	font-weight: 400;
+	color: var(--baseColor);
+}
+.contact p {
+	font-size: 1rem;
+	letter-spacing: 0.8px;
+}
+.contact-content {
+	display: flex;
+	gap: 20px;
+	width: 100%;
+	max-width: 1200px;
 }
 
-.contact form {
+.contact-text {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: left;
+	padding: 20px;
+}
+
+.contact-form {
+	flex: 1;
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
+	padding: 20px;
 }
 
 .contact input,
@@ -16,6 +44,7 @@
 	border: 1px solid #ccc;
 	border-radius: 5px;
 	width: 100%;
+	resize: none;
 }
 
 .contact button {
@@ -30,5 +59,14 @@
 }
 
 .contact button:hover {
-	background: var(--baseColor);
+	background: white;
+	color: var(--baseColor);
+}
+
+@media (max-width: 768px) {
+	.contact-content {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
 }
