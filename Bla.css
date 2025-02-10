@@ -1,60 +1,113 @@
-.footer {
+.contact {
 	display: flex;
-	flex-direction: column;
-	padding: 16px 70px;
-	background-color: black;
+	justify-content: center;
+	align-items: center;
+	padding: 40px;
+}
+
+.contact h2 {
+	font-size: 2.5rem;
+	font-weight: 400;
+}
+
+.contact p {
+	font-size: 1rem;
+	letter-spacing: 0.8px;
+}
+
+.contact-description {
 	color: var(--gray);
 }
 
-.footer-top {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 10px 50px;
-	border-bottom: 1px solid var(--gray);
+.contact a {
+	text-decoration: none;
+	color: white;
 }
 
-.logo {
-	font-size: 2rem;
+.contact-content {
+	display: flex;
+	gap: 20px;
+	width: 100%;
+	max-width: 1200px;
+	border-top: 1px solid var(--baseColor);
+	border-bottom: 1px solid var(--baseColor);
+	padding: 20px 0;
+}
+
+.contact-icon {
+	margin-right: 10px;
+}
+
+.contact-text {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: left;
+	padding: 20px;
+}
+
+.contact-form {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding: 20px;
+}
+
+.contact input,
+.contact textarea {
+	padding: 10px;
+	font-size: 1rem;
+	border: 1px solid var(--baseColor);
+	background-color: black;
+	border-radius: 5px;
+	width: 100%;
+	resize: none;
+}
+
+.contact textarea {
+	height: 150px;
+}
+
+.contact button {
+	padding: 10px;
+	font-size: 1rem;
+	color: black;
+	background: white;
+	border: none;
+	border-radius: 5px;
 	font-weight: bold;
-	display: flex;
-	align-items: center;
+	transition: background 0.3s;
 }
 
-.dev {
-	color: #fff;
-}
-
-.folio {
+.contact button:hover {
+	background: white;
 	color: var(--baseColor);
 }
 
-.social-icons {
-	display: flex;
-	gap: 16px;
-}
-
-.social-icons a:hover {
-	fill: var(--baseColor);
-}
-
-.footer-bottom p {
-	margin-top: 16px;
-	text-align: center;
-	font-size: 14px;
-	color: var(--gray);
-}
-
-/* Styl dla ekranów mobilnych */
+/* Układ kolumnowy na urządzeniach mobilnych */
 @media (max-width: 768px) {
-	.footer-top {
+	.contact-content {
 		flex-direction: column;
 		align-items: center;
-		padding: 20px;
-		gap: 16px; /* Dodanie odstępu między logo a ikonami */
+		text-align: center;
 	}
 
-	.social-icons {
-		justify-content: center;
+	.contact-text address {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		align-items: center;
+	}
+
+	.contact-text p {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.contact-icon {
+		margin: 0 0 8px;
 	}
 }

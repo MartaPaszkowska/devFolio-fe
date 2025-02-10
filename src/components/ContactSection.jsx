@@ -24,24 +24,22 @@ function ContactSection() {
 							Wrocław, Poland
 						</p>
 						<p>
+							<img
+								src={envelopeIcon}
+								alt="phone"
+								className="contact-icon"
+							/>
 							<a href="mailto:marta.j.paszkowska@gmail.com">
-								<img
-									src={envelopeIcon}
-									alt="phone"
-									className="contact-icon"
-								/>
 								marta.j.paszkowska@gmail.com
 							</a>
 						</p>
 						<p>
-							<a href="tel:+48513964028">
-								<img
-									src={whatsAppIcon}
-									alt="whatsApp"
-									className="contact-icon"
-								/>
-								+48 513 964 028
-							</a>
+							<img
+								src={whatsAppIcon}
+								alt="whatsApp"
+								className="contact-icon"
+							/>
+							<a href="tel:+48513964028">+48 513 964 028</a>
 						</p>
 					</address>
 				</div>
