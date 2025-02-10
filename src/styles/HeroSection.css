@@ -2,10 +2,7 @@
 	margin-top: 50px;
 	text-align: center;
 	padding: 40px 20px;
-	background-color: url("../../public/assets/images/ORSD620.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
-
+	background-color: black;
 	color: var(--gray);
 }
 
@@ -58,8 +55,8 @@
 }
 
 /* Styl dla przycisków */
-.designer-button,
-.download-button {
+
+.hero-button {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -68,9 +65,9 @@
 	background: var(--baseColor);
 	color: #e0e0e0;
 	border: none;
-	border-radius: 30px;
+	border-radius: 5px;
 	text-decoration: none;
-	width: 400px;
+	width: 220px;
 	font-weight: 600;
 }
 

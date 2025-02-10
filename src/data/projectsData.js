@@ -7,7 +7,7 @@ export const projects = [
 		liveLink: "https://martapaszkowska.github.io/project-cinemania/",
 		githubLink:
 			"https://github.com/example/personal-wallhttps://github.com/MartaPaszkowska/project-cinemania",
-		image: "../../public/assets/images/cinemaniaImage.jpg",
+		image: "../../cinemaniaImage.jpg",
 	},
 	{
 		title: "Movie Explorer",

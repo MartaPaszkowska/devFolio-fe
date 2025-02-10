@@ -1,17 +1,17 @@
 .footer {
 	display: flex;
 	flex-direction: column;
-	padding: 16px 32px;
-	background-color: #101010;
-	color: #fff;
+	padding: 16px 70px;
+	background-color: black;
+	color: var(--gray);
 }
 
 .footer-top {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 20px 0;
-	border-bottom: 1px solid #4a4a4a; /* Szara linia */
+	padding: 10px 50px;
+	border-bottom: 1px solid var(--gray);
 }
 
 .logo {
@@ -20,29 +20,21 @@
 	display: flex;
 	align-items: center;
 }
-
 .dev {
 	color: #fff;
 }
 
 .folio {
-	color: #00ff00;
+	color: var(--baseColor);
 }
-
 .social-icons {
 	display: flex;
-	gap: 24px;
+	gap: 16px;
 }
 
-.social-icons .icon {
-	width: 32px;
-	height: 32px;
-	fill: #7a878d;
-}
-
-.footer-bottom {
+.footer-bottom p {
 	margin-top: 16px;
 	text-align: center;
 	font-size: 14px;
-	color: #7a878d;
+	color: var(--gray);
 }

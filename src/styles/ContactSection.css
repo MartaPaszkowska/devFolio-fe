@@ -5,21 +5,34 @@
 	padding: 40px;
 }
 .contact h2 {
-	font-size: 1.8rem;
+	font-size: 2.5rem;
 	font-weight: 400;
-	color: var(--baseColor);
 }
 .contact p {
 	font-size: 1rem;
 	letter-spacing: 0.8px;
 }
+.contact-description {
+	color: var(--gray);
+}
+.contact a {
+	text-decoration: none;
+	color: white;
+}
+
 .contact-content {
 	display: flex;
 	gap: 20px;
 	width: 100%;
 	max-width: 1200px;
+	border-top: 1px solid var(--baseColor);
+	border-bottom: 1px solid var(--baseColor);
+	padding: 20px 0;
 }
 
+.contact-icon {
+	margin-right: 10px;
+}
 .contact-text {
 	flex: 1;
 	display: flex;
@@ -41,17 +54,21 @@
 .contact textarea {
 	padding: 10px;
 	font-size: 1rem;
-	border: 1px solid #ccc;
+	border: 1px solid var(--baseColor);
+	background-color: black;
 	border-radius: 5px;
 	width: 100%;
+
 	resize: none;
 }
-
+.contact textarea {
+	height: 150px;
+}
 .contact button {
 	padding: 10px;
 	font-size: 1rem;
-	color: white;
-	background: var(--baseColor);
+	color: black;
+	background: white;
 	border: none;
 	border-radius: 5px;
 	font-weight: bold;
@@ -69,4 +86,10 @@
 		align-items: center;
 		text-align: center;
 	}
+}
+.contact-line {
+	width: 100%;
+	height: 4px;
+	background-color: blue;
+	margin: 10px 0;
 }

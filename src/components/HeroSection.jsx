@@ -1,8 +1,8 @@
 import { HashLink } from "react-router-hash-link";
 import "../styles/HeroSection.css";
-import profileImage from "../../public/assets/images/CVzdjecie.jpg";
+import profileImage from "../assets/images/CVzdjecie.jpg";
 import reactIcon from "../assets/svg/technologis/reactIcon.svg";
-import resumeFile from "../../public/assets/pdf/Marta_PaszkowskaCV_-_PL.pdf";
+import resumeFile from "../assets/pdf/Marta_PaszkowskaCV_-_PL.pdf";
 import scrollIcon from "../assets/svg/arrow-down.svg";
 
 function HeroSection(onClose) {
@@ -22,12 +22,12 @@ function HeroSection(onClose) {
 					smooth
 					to="/#designer"
 					onClick={onClose}
-					className="designer-button"
+					className="hero-button"
 				>
 					For Designer
 				</HashLink>
 
-				<a href={resumeFile} download className="download-button">
+				<a href={resumeFile} download className="hero-button">
 					Download Resume
 				</a>
 			</div>

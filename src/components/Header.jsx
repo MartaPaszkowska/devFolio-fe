@@ -17,17 +17,17 @@ function Header() {
 				<span className="folio">Folio</span>
 			</div>
 			<nav className="nav">
-				<HashLink smooth to="/#hero">
+				<HashLink className="nav-a" smooth to="/#hero">
 					Home
 				</HashLink>
-				<HashLink smooth to="/#about">
+				<HashLink className="nav-a" smooth to="/#about">
 					About
 				</HashLink>
-				<HashLink smooth to="/#projects">
+				<HashLink className="nav-a" smooth to="/#projects">
 					Projects
 				</HashLink>
-				<HashLink smooth to="/#contact">
-					Contact
+				<HashLink className="nav-getInTouch" smooth to="/#contact">
+					Get in touch
 				</HashLink>
 			</nav>
 			<button
