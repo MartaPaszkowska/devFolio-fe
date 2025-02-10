@@ -76,7 +76,9 @@
 	text-align: center;
 	font-size: 1.3rem;
 }
-
+.nav-getInTouch:hover {
+	color: var(--baseColor);
+}
 /* Przycisk menu */
 .menu-button {
 	display: none;
