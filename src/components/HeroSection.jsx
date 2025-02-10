@@ -33,7 +33,11 @@ function HeroSection(onClose) {
 			</div>
 			<div className="scroll">
 				<p>scroll down</p>
-				<img src={scrollIcon} alt="arrow-down" class="bouncing-arrow" />
+				<img
+					src={scrollIcon}
+					alt="arrow-down"
+					className="bouncing-arrow"
+				/>
 			</div>
 		</section>
 	);
