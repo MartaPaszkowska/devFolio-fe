@@ -38,3 +38,17 @@
 	font-size: 14px;
 	color: var(--gray);
 }
+
+/* Styl dla ekranów mobilnych */
+@media (max-width: 768px) {
+	.footer-top {
+		flex-direction: column;
+		align-items: center;
+		padding: 20px;
+		gap: 16px;
+	}
+
+	.social-icons {
+		justify-content: center;
+	}
+}
