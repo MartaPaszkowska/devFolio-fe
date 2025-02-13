@@ -63,7 +63,7 @@ function ContactSection() {
 						</p>
 					</address>
 				</div>
-				<form className="contact-form">
+				<form ref={form} onSubmit={sendEmail} className="contact-form">
 					<input
 						type="text"
 						placeholder="Full Name/Company*"
