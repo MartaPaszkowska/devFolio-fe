@@ -12,8 +12,8 @@ function ContactSection() {
 		e.preventDefault();
 
 		emailjs
-			.sendForm("REACT_SERVICE_ID", "REACT_TEMPLATE_ID", form.current, {
-				publicKey: "REACT_PUBLIC_KEY",
+			.sendForm(REACT_SERVICE_ID, REACT_TEMPLATE_ID, form.current, {
+				publicKey: REACT_PUBLIC_KEY,
 			})
 			.then(
 				() => {
