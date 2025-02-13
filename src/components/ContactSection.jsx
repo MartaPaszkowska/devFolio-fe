@@ -14,9 +14,9 @@ function ContactSection() {
 		e.preventDefault();
 
 		// Konfiguracja EmailJS
-		const serviceId = process.env.REACT_SERVICE_ID;
-		const templateId = process.env.REACT_TEMPLATE_ID;
-		const publicKey = process.env.REACT_PUBLIC_KEY;
+		const serviceId = "service_myjgg76";
+		const templateId = "template_9ztfql4";
+		const publicKey = "eXIs4_L6F2j3EHPBL";
 
 		// Dane wysyłane do EmailJS
 		const templateParams = {
