@@ -16,7 +16,7 @@ function ContactSection() {
 		// Konfiguracja EmailJS
 		const serviceId = "service_myjgg76";
 		const templateId = "template_9ztfql4";
-		const publicKey = "eXIs4_L6F2j3EHPBL";
+		const publicKey = "ygUBqJVh5dzoxe5wy";
 
 		// Dane wysyłane do EmailJS
 		const templateParams = {
