@@ -13,10 +13,10 @@ function ContactSection() {
 
 		emailjs
 			.sendForm(
-				process.env.REACT_SERVICE_ID, // ID usługi EmailJS z .env
-				"template_xxxxxx", // ID szablonu (musisz ustawić w EmailJS)
+				process.env.REACT_APP_SERVICE_ID, // ID usługi EmailJS
+				process.env.REACT_APP_TEMPLATE_ID, // ID szablonu EmailJS
 				form.current,
-				"your_public_key" // Publiczny klucz użytkownika EmailJS
+				process.env.REACT_APP_PUBLIC_KEY // Klucz publiczny EmailJS
 			)
 			.then((result) => {
 				console.log("Wiadomość wysłana:", result.text);
