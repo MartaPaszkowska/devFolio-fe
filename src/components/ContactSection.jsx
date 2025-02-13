@@ -2,32 +2,43 @@ import "../styles/ContactSection.css";
 import locationIcon from "../assets/svg/location.svg";
 import envelopeIcon from "../assets/svg/envelope.svg";
 import whatsAppIcon from "../assets/svg/whatsapp.svg";
-import { useRef } from "react";
+import { useState } from "react";
 import emailjs from "@emailjs/browser";
 
 function ContactSection() {
-	const form = useRef();
+	const [name, setName] = useState("");
+	const [email, setEmail] = useState("");
+	const [message, setMessage] = useState("");
 
-	const sendEmail = (e) => {
+	const handleSubmit = (e) => {
 		e.preventDefault();
 
+		// Konfiguracja EmailJS
+		const serviceId = process.env.REACT_SERVICE_ID;
+		const templateId = process.env.REACT_TEMPLATE_ID;
+		const publicKey = process.env.REACT_PUBLIC_KEY;
+
+		// Dane wysyłane do EmailJS
+		const templateParams = {
+			from_name: name,
+			from_email: email,
+			message: message,
+		};
+
+		// Wysyłanie wiadomości
 		emailjs
-			.sendForm(
-				process.env.REACT_SERVICE_ID,
-				process.env.REACT_TEMPLATE_ID,
-				form.current,
-				process.env.REACT_PUBLIC_KEY
-			)
-			.then(
-				() => {
-					alert("Your message has been sent!");
-					form.current.reset(); // Czyści formularz po wysłaniu
-				},
-				(error) => {
-					console.error("FAILED...", error.text);
-					alert("Error sending message. Please try again.");
-				}
-			);
+			.send(serviceId, templateId, templateParams, publicKey)
+			.then((response) => {
+				console.log("Email sent successfully:", response);
+				alert("Your message has been sent!");
+				setName("");
+				setEmail("");
+				setMessage("");
+			})
+			.catch((error) => {
+				console.error("Error sending email:", error);
+				alert("Error sending message. Please try again.");
+			});
 	};
 
 	return (
@@ -70,22 +81,25 @@ function ContactSection() {
 					</address>
 				</div>
 
-				<form ref={form} onSubmit={sendEmail} className="contact-form">
+				<form onSubmit={handleSubmit} className="contact-form">
 					<input
 						type="text"
-						name="user_name"
-						placeholder="Full Name/Company*"
+						placeholder="Your Name"
+						value={name}
+						onChange={(e) => setName(e.target.value)}
 						required
 					/>
 					<input
 						type="email"
-						name="user_email"
-						placeholder="E-mail"
+						placeholder="Your Email"
+						value={email}
+						onChange={(e) => setEmail(e.target.value)}
 						required
 					/>
 					<textarea
-						name="message"
-						placeholder="How can I help you?*"
+						placeholder="Your Message"
+						value={message}
+						onChange={(e) => setMessage(e.target.value)}
 						required
 					></textarea>
 					<button type="submit">Send Message</button>
