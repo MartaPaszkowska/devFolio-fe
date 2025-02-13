@@ -22,6 +22,7 @@ function ContactSection() {
 		const templateParams = {
 			from_name: name,
 			from_email: email,
+			to_name: "Marta",
 			message: message,
 		};
 
