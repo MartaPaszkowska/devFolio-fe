@@ -2,8 +2,28 @@ import "../styles/ContactSection.css";
 import locationIcon from "../assets/svg/location.svg";
 import envelopeIcon from "../assets/svg/envelope.svg";
 import whatsAppIcon from "../assets/svg/whatsapp.svg";
+import { useRef } from "react";
+import emailjs from "emailjs-com";
 
 function ContactSection() {
+	const form = useRef();
+
+	const sendEmail = (e) => {
+		e.preventDefault();
+
+		emailjs
+			.sendForm(process.env.REACT_SERVICE_ID, form.current)
+			.then((result) => {
+				console.log("Wiadomość wysłana:", result.text);
+				alert("Your message has been sent!");
+			})
+			.catch((error) => {
+				console.log("Błąd wysyłania:", error.text);
+				alert("Error sending message. Please try again.");
+			});
+
+		e.target.reset();
+	};
 	return (
 		<section className="contact">
 			<div className="contact-content">

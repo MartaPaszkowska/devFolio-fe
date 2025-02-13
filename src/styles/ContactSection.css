@@ -56,6 +56,7 @@
 	font-size: 1rem;
 	border: 1px solid var(--baseColor);
 	background-color: black;
+	color: white;
 	border-radius: 5px;
 	width: 100%;
 	resize: none;
