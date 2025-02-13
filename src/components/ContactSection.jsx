@@ -3,7 +3,7 @@ import locationIcon from "../assets/svg/location.svg";
 import envelopeIcon from "../assets/svg/envelope.svg";
 import whatsAppIcon from "../assets/svg/whatsapp.svg";
 import { useRef } from "react";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 
 function ContactSection() {
 	const form = useRef();
@@ -12,22 +12,18 @@ function ContactSection() {
 		e.preventDefault();
 
 		emailjs
-			.sendForm(
-				process.env.REACT_SERVICE_ID, // ID usługi EmailJS
-				process.env.REACT_TEMPLATE_ID, // ID szablonu EmailJS
-				form.current,
-				process.env.REACT_PUBLIC_KEY // Klucz publiczny EmailJS
-			)
-			.then((result) => {
-				console.log("Wiadomość wysłana:", result.text);
-				alert("Your message has been sent!");
+			.sendForm("REACT_SERVICE_ID", "REACT_TEMPLATE_ID", form.current, {
+				publicKey: "REACT_PUBLIC_KEY",
 			})
-			.catch((error) => {
-				console.log("Błąd wysyłania:", error.text);
-				alert("Error sending message. Please try again.");
-			});
-
-		e.target.reset();
+			.then(
+				() => {
+					alert("Your message has been sent!");
+				},
+				(error) => {
+					console.log("FAILED...", error.text);
+					alert("Error sending message. Please try again.");
+				}
+			);
 	};
 
 	return (
@@ -88,7 +84,9 @@ function ContactSection() {
 						placeholder="How can I help you?*"
 						required
 					></textarea>
-					<button type="submit">Send Message</button>
+					<button type="submit" value="Send">
+						Send Message
+					</button>
 				</form>
 			</div>
 		</section>
