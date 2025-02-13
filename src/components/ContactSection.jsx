@@ -12,15 +12,19 @@ function ContactSection() {
 		e.preventDefault();
 
 		emailjs
-			.sendForm(REACT_SERVICE_ID, REACT_TEMPLATE_ID, form.current, {
-				publicKey: REACT_PUBLIC_KEY,
-			})
+			.sendForm(
+				process.env.REACT_SERVICE_ID,
+				process.env.REACT_TEMPLATE_ID,
+				form.current,
+				process.env.REACT_PUBLIC_KEY
+			)
 			.then(
 				() => {
 					alert("Your message has been sent!");
+					form.current.reset(); // Czyści formularz po wysłaniu
 				},
 				(error) => {
-					console.log("FAILED...", error.text);
+					console.error("FAILED...", error.text);
 					alert("Error sending message. Please try again.");
 				}
 			);
@@ -84,9 +88,7 @@ function ContactSection() {
 						placeholder="How can I help you?*"
 						required
 					></textarea>
-					<button type="submit" value="Send">
-						Send Message
-					</button>
+					<button type="submit">Send Message</button>
 				</form>
 			</div>
 		</section>
