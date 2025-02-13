@@ -1,3 +1,10 @@
+import "../styles/ContactSection.css";
+import locationIcon from "../assets/svg/location.svg";
+import envelopeIcon from "../assets/svg/envelope.svg";
+import whatsAppIcon from "../assets/svg/whatsapp.svg";
+import { useRef } from "react";
+import emailjs from "emailjs-com";
+
 function ContactSection() {
 	const form = useRef();
 
@@ -7,7 +14,9 @@ function ContactSection() {
 		emailjs
 			.sendForm(
 				process.env.REACT_SERVICE_ID, // ID usługi EmailJS z .env
-				form.current
+				"template_xxxxxx", // ID szablonu (musisz ustawić w EmailJS)
+				form.current,
+				"your_public_key" // Publiczny klucz użytkownika EmailJS
 			)
 			.then((result) => {
 				console.log("Wiadomość wysłana:", result.text);

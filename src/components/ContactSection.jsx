@@ -14,7 +14,9 @@ function ContactSection() {
 		emailjs
 			.sendForm(
 				process.env.REACT_SERVICE_ID, // ID usługi EmailJS z .env
-				form.current
+				"template_xxxxxx", // ID szablonu (musisz ustawić w EmailJS)
+				form.current,
+				"your_public_key" // Publiczny klucz użytkownika EmailJS
 			)
 			.then((result) => {
 				console.log("Wiadomość wysłana:", result.text);
@@ -78,7 +80,7 @@ function ContactSection() {
 					<input
 						type="email"
 						name="user_email"
-						placeholder="E-mail/Tel*"
+						placeholder="E-mail"
 						required
 					/>
 					<textarea
