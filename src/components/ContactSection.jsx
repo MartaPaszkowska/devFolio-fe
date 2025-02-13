@@ -12,7 +12,10 @@ function ContactSection() {
 		e.preventDefault();
 
 		emailjs
-			.sendForm(process.env.REACT_SERVICE_ID, form.current)
+			.sendForm(
+				process.env.REACT_SERVICE_ID, // ID usługi EmailJS z .env
+				form.current
+			)
 			.then((result) => {
 				console.log("Wiadomość wysłana:", result.text);
 				alert("Your message has been sent!");
@@ -24,6 +27,7 @@ function ContactSection() {
 
 		e.target.reset();
 	};
+
 	return (
 		<section className="contact">
 			<div className="contact-content">
@@ -63,14 +67,22 @@ function ContactSection() {
 						</p>
 					</address>
 				</div>
+
 				<form ref={form} onSubmit={sendEmail} className="contact-form">
 					<input
 						type="text"
+						name="user_name"
 						placeholder="Full Name/Company*"
 						required
 					/>
-					<input type="email" placeholder="E-mail/Tel*" required />
+					<input
+						type="email"
+						name="user_email"
+						placeholder="E-mail/Tel*"
+						required
+					/>
 					<textarea
+						name="message"
 						placeholder="How can I help you?*"
 						required
 					></textarea>
