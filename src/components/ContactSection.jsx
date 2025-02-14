@@ -14,9 +14,9 @@ function ContactSection() {
 		e.preventDefault();
 
 		// Konfiguracja EmailJS
-		const serviceId = import.meta.env.VITE_REACT_APP_SERVICE_ID;
-		const templateId = import.meta.env.VITE_REACT_APP_TEMPLATE_ID;
-		const publicKey = import.meta.env.VITE_REACT_APP_PUBLIC_KEY;
+		const serviceId = "service_myjgg76";
+		const templateId = "template_9ztfql4";
+		const publicKey = "eXIs4_L6F2j3EHPBL";
 
 		// Dane wysyłane do EmailJS
 		const templateParams = {
