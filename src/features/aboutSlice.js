@@ -1,11 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-// Inicjalny stan - bez zmiany treści
 const initialState = {
 	isExpanded: false,
 };
 
-// Tworzenie slice'a Redux dla AboutSection
 const aboutSlice = createSlice({
 	name: "about",
 	initialState,
@@ -16,6 +14,5 @@ const aboutSlice = createSlice({
 	},
 });
 
-// Eksportowanie akcji i reduktora
 export const { toggleExpand } = aboutSlice.actions;
 export default aboutSlice.reducer;
