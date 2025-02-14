@@ -2,44 +2,31 @@ import "../styles/ContactSection.css";
 import locationIcon from "../assets/svg/location.svg";
 import envelopeIcon from "../assets/svg/envelope.svg";
 import whatsAppIcon from "../assets/svg/whatsapp.svg";
-import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import React, { useRef } from "react";
 
 function ContactSection() {
-	const [name, setName] = useState("");
-	const [email, setEmail] = useState("");
-	const [message, setMessage] = useState("");
+	const form = useRef();
 
-	const handleSubmit = (e) => {
+	const sendEmail = (e) => {
 		e.preventDefault();
 
-		// Konfiguracja EmailJS
-		const serviceId = "service_myjgg76";
-		const templateId = "template_9ztfql4";
-		const publicKey = "eXIs4_L6F2j3EHPBL";
+		const serviceId = import.meta.env.VITE_REACT_APP_SERVICE_ID;
+		const templateId = import.meta.env.VITE_REACT_APP_TEMPLATE_ID;
+		const publicKey = import.meta.env.VITE_REACT_APP_PUBLIC_KEY;
 
-		// Dane wysyłane do EmailJS
-		const templateParams = {
-			from_name: name,
-			from_email: email,
-			to_name: "Marta",
-			message: message,
-		};
-
-		// Wysyłanie wiadomości
 		emailjs
-			.send(serviceId, templateId, templateParams, publicKey)
-			.then((response) => {
-				console.log("Email sent successfully:", response);
-				alert("Your message has been sent!");
-				setName("");
-				setEmail("");
-				setMessage("");
-			})
-			.catch((error) => {
-				console.error("Error sending email:", error);
-				alert("Error sending message. Please try again.");
-			});
+			.sendForm(serviceId, templateId, form.current, { publicKey })
+			.then(
+				() => {
+					alert("Your message has been sent!");
+				},
+				(error) => {
+					console.error("FAILED...", error.text);
+					alert("Error sending message. Please try again.");
+				}
+			);
+		form.current.reset();
 	};
 
 	return (
@@ -82,28 +69,27 @@ function ContactSection() {
 					</address>
 				</div>
 
-				<form onSubmit={handleSubmit} className="contact-form">
+				<form onSubmit={sendEmail} ref={form} className="contact-form">
 					<input
 						type="text"
 						placeholder="Your Name"
-						value={name}
-						onChange={(e) => setName(e.target.value)}
+						name="from_name"
 						required
 					/>
 					<input
 						type="email"
 						placeholder="Your Email"
-						value={email}
-						onChange={(e) => setEmail(e.target.value)}
+						name="from_email"
 						required
 					/>
 					<textarea
 						placeholder="Your Message"
-						value={message}
-						onChange={(e) => setMessage(e.target.value)}
+						name="message"
 						required
 					></textarea>
-					<button type="submit">Send Message</button>
+					<button type="submit" value="Send">
+						Send Message
+					</button>
 				</form>
 			</div>
 		</section>
