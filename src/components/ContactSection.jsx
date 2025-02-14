@@ -11,26 +11,19 @@ function ContactSection() {
 	const sendEmail = (e) => {
 		e.preventDefault();
 
-		//		const serviceId = import.meta.env.VITE_REACT_APP_SERVICE_ID;
-		//		const templateId = import.meta.env.VITE_REACT_APP_TEMPLATE_ID;
-		//		const publicKey = import.meta.env.VITE_REACT_APP_PUBLIC_KEY;
+		const serviceId = import.meta.env.VITE_REACT_APP_SERVICE_ID;
+		const templateId = import.meta.env.VITE_REACT_APP_TEMPLATE_ID;
+		const publicKey = import.meta.env.VITE_REACT_APP_PUBLIC_KEY;
 
-		emailjs
-			.sendForm(
-				"service_myjgg76",
-				"template_9ztfql4",
-				form.current,
-				"hVyyPamEyShCT1a3e"
-			)
-			.then(
-				() => {
-					alert("Your message has been sent!");
-				},
-				(error) => {
-					console.error("FAILED...", error.text);
-					alert("Error sending message. Please try again.");
-				}
-			);
+		emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
+			() => {
+				alert("Your message has been sent!");
+			},
+			(error) => {
+				console.error("FAILED...", error.text);
+				alert("Error sending message. Please try again.");
+			}
+		);
 		form.current.reset();
 	};
 
