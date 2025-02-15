@@ -16,3 +16,16 @@
 .read-more-button:hover {
 	color: #007bff;
 }
+.about-read-more-button {
+	color: black;
+	background-color: white;
+	padding: 5px 10px;
+	border: 1px solid black;
+	font-weight: bold;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.about-read-more-button:hover {
+	color: var(--baseColor);
+}
