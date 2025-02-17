@@ -1,14 +1,17 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { lazy, suspense } from "react";
 
-import HomePage from "./pages/HomePage";
+const HomePage = lazy(() => import("./pages/HomePage"));
 
 function App() {
 	return (
-		<Router>
-			<Routes>
-				<Route path="/" element={<HomePage />} />
-			</Routes>
-		</Router>
+		<Suspense fallback={<div>Loanding...</div>}>
+			<Router>
+				<Routes>
+					<Route path="/" element={<HomePage />} />
+				</Routes>
+			</Router>
+		</Suspense>
 	);
 }
 
