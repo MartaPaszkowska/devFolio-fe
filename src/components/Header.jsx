@@ -5,7 +5,8 @@ import { HashLink } from "react-router-hash-link";
 import menuIcon from "../assets/svg/menu.svg";
 import { memo } from "react";
 
-function Header() {
+const Header = () => {
+	console.log("Header renderuje się");
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 	const toggleMenu = () => {
@@ -41,6 +42,6 @@ function Header() {
 			<SideMenu isOpen={isMenuOpen} onClose={toggleMenu} />
 		</header>
 	);
-}
+};
 
 export default memo(Header);
