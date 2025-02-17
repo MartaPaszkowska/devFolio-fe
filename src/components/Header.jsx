@@ -3,6 +3,7 @@ import { useState } from "react";
 import SideMenu from "./SideMenu";
 import { HashLink } from "react-router-hash-link";
 import menuIcon from "../assets/svg/menu.svg";
+import { memo } from "react";
 
 function Header() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,4 +43,4 @@ function Header() {
 	);
 }
 
-export default Header;
+export default memo(Header);

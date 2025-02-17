@@ -8,6 +8,7 @@ import viteIcon from "../assets/svg/technologis/vite.svg";
 import postmanIcon from "../assets/svg/technologis/postman.svg";
 import mongoIcon from "../assets/svg/technologis/mongodb.svg";
 import figmaIcon from "../assets/svg/technologis/figma-icon.svg";
+import { memo } from "react";
 
 function TechnologisSection() {
 	return (
@@ -49,4 +50,4 @@ function TechnologisSection() {
 		</section>
 	);
 }
-export default TechnologisSection;
+export default memo(TechnologisSection);

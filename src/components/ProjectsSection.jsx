@@ -2,6 +2,7 @@ import React from "react";
 import { projects } from "../data/projectsData";
 import ReadMore from "../components/ReadMore";
 import "../styles/ProjectsSection.css";
+import { memo } from "react";
 
 function ProjectsSection() {
 	return (
@@ -49,4 +50,4 @@ function ProjectsSection() {
 	);
 }
 
-export default ProjectsSection;
+export default memo(ProjectsSection);
