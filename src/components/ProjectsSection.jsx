@@ -4,7 +4,7 @@ import ReadMore from "../components/ReadMore";
 import "../styles/ProjectsSection.css";
 import { memo } from "react";
 
-function ProjectsSection() {
+const ProjectsSection = () => {
 	return (
 		<section className="projects">
 			<h2>Projects</h2>
@@ -48,6 +48,6 @@ function ProjectsSection() {
 			))}
 		</section>
 	);
-}
+};
 
 export default memo(ProjectsSection);

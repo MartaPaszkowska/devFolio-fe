@@ -6,7 +6,6 @@ import menuIcon from "../assets/svg/menu.svg";
 import { memo } from "react";
 
 const Header = () => {
-	console.log("Header renderuje się");
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 	const toggleMenu = () => {
