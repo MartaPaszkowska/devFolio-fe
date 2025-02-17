@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { lazy, suspense } from "react";
+import React, { lazy, Suspense } from "react";
 
 const HomePage = lazy(() => import("./pages/HomePage"));
 
