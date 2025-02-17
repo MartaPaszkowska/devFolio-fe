@@ -5,7 +5,7 @@ import reactIcon from "../assets/svg/technologis/reactIcon.svg";
 import resumeFile from "../assets/pdf/Marta_PaszkowskaCV_-_PL.pdf";
 import scrollIcon from "../assets/svg/arrow-down.svg";
 
-function HeroSection(onClose) {
+const HeroSection = (onClose) => {
 	return (
 		<section className="hero">
 			<div className="hero-image-container">
@@ -41,6 +41,6 @@ function HeroSection(onClose) {
 			</div>
 		</section>
 	);
-}
+};
 
 export default HeroSection;

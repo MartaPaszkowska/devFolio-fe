@@ -5,7 +5,7 @@ import whatsAppIcon from "../assets/svg/whatsapp.svg";
 import emailjs from "@emailjs/browser";
 import React, { useRef } from "react";
 
-function ContactSection() {
+const ContactSection = () => {
 	const form = useRef();
 
 	const sendEmail = (e) => {
@@ -92,6 +92,6 @@ function ContactSection() {
 			</div>
 		</section>
 	);
-}
+};
 
 export default ContactSection;

@@ -2,7 +2,7 @@ import LinkedInIcon from "../assets/svg/linkedin.svg";
 import GitHubIcon from "../assets/svg/github.svg";
 import "../styles/Footer.css";
 
-function Footer() {
+const Footer = () => {
 	return (
 		<footer className="footer">
 			<div className="footer-top">
@@ -47,6 +47,6 @@ function Footer() {
 			</div>
 		</footer>
 	);
-}
+};
 
 export default Footer;

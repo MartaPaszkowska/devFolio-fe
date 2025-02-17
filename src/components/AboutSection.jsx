@@ -2,7 +2,7 @@ import "../styles/AboutSection.css";
 import aboutText from "../data/aboutData";
 import ReadMore from "../components/ReadMore";
 
-function AboutSection() {
+const AboutSection = () => {
 	return (
 		<section className="about">
 			<h2>About Me</h2>
@@ -13,6 +13,6 @@ function AboutSection() {
 			/>
 		</section>
 	);
-}
+};
 
 export default AboutSection;

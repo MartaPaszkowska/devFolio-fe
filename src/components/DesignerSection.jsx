@@ -1,6 +1,6 @@
 import "../styles/DesignerSection.css";
 
-function DesignerSection() {
+const DesignerSection = () => {
 	return (
 		<section className="desiner">
 			<h2>Have A Project In Mind? Let's Get in Touch.</h2>
@@ -10,5 +10,5 @@ function DesignerSection() {
 			</p>
 		</section>
 	);
-}
+};
 export default DesignerSection;

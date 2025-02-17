@@ -10,7 +10,7 @@ import mongoIcon from "../assets/svg/technologis/mongodb.svg";
 import figmaIcon from "../assets/svg/technologis/figma-icon.svg";
 import { memo } from "react";
 
-function TechnologisSection() {
+const TechnologisSection = () => {
 	return (
 		<section className="tech">
 			<h2>Technologies</h2>
@@ -49,5 +49,5 @@ function TechnologisSection() {
 			</ul>
 		</section>
 	);
-}
+};
 export default memo(TechnologisSection);
