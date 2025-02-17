@@ -12,7 +12,7 @@ import figmaIcon from "../assets/svg/technologis/figma-icon.svg";
 function TechnologisSection() {
 	return (
 		<section className="tech">
-			<h2>Technologis</h2>
+			<h2>Technologies</h2>
 			<ul className="tech-svg">
 				<li>
 					<img className="tech-icon" src={cssIcon} alt="CSS" />
