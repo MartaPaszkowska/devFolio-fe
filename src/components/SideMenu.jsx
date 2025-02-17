@@ -1,6 +1,7 @@
 import { HashLink } from "react-router-hash-link";
 import "../styles/SideMenu.css";
 import closeIcon from "../assets/svg/x.svg";
+import { memo } from "react";
 
 const SideMenu = ({ isOpen, onClose }) => {
 	return (
@@ -28,4 +29,4 @@ const SideMenu = ({ isOpen, onClose }) => {
 	);
 };
 
-export default SideMenu;
+export default memo(SideMenu);
