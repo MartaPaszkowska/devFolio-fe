@@ -28,4 +28,4 @@ const SideMenu = ({ isOpen, onClose }) => {
 	);
 };
 
-export default memo(SideMenu);
+export default SideMenu;
