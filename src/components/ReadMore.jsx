@@ -1,7 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { toggleReadMore } from "../features/readMoreSlice";
 import "../styles/ReadMore.css";
-import { memo } from "react";
 
 const ReadMore = ({
 	text,
@@ -24,4 +23,4 @@ const ReadMore = ({
 	);
 };
 
-export default memo(ReadMore);
+export default ReadMore;
