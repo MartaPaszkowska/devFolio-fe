@@ -1,31 +1,33 @@
 {
-	"name": "backend",
+	"name": "backend-my-webside",
 	"version": "1.0.0",
+	"main": "server.js",
 	"private": true,
 	"scripts": {
 		"start": "cross-env NODE_ENV=production node ./server.js",
 		"start:dev": "cross-env NODE_ENV=development nodemon ./server.js",
 		"lint": "eslint **/*.js",
-		"lint:fix": "eslint --fix **/*.js",
-		"dev": "vite"
+		"lint:fix": "eslint --fix **/*.js"
 	},
 	"dependencies": {
 		"bcrypt": "^5.1.1",
-		"cloudinary": "^2.5.1",
-		"cors": "^2.8.5",
+		"cors": "2.8.5",
 		"cross-env": "7.0.3",
-		"crypto": "^1.0.1",
 		"dotenv": "^16.4.7",
-		"express": "^4.21.2",
-		"gravatar": "^1.8.2",
-		"jimp": "^0.16.1",
+		"express": "^4.17.1",
+		"http-status-codes": "^2.3.0",
 		"joi": "^17.13.3",
 		"jsonwebtoken": "^9.0.2",
-		"mongodb": "4.1",
-		"mongoose": "^8.10.1",
-		"morgan": "^1.10.0",
-		"multer": "^1.4.5-lts.1",
-		"nodemailer": "^6.9.16"
+		"mongo": "^0.1.0",
+		"mongodb": "^6.11.0",
+		"mongoose": "^8.8.3",
+		"morgan": "1.10.0",
+		"passport": "^0.7.0",
+		"passport-google-oauth20": "^2.0.0",
+		"passport-jwt": "^4.0.1",
+		"swagger-jsdoc": "^6.2.8",
+		"swagger-ui-express": "^5.0.1",
+		"uuid": "^11.0.3"
 	},
 	"devDependencies": {
 		"eslint": "7.19.0",
@@ -34,7 +36,6 @@
 		"eslint-plugin-import": "2.25.3",
 		"eslint-plugin-node": "^11.1.0",
 		"eslint-plugin-promise": "5.2.0",
-		"nodemon": "2.0.15",
-		"vite": "^6.1.0"
+		"nodemon": "2.0.15"
 	}
 }
