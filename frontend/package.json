@@ -3,11 +3,13 @@
 	"private": true,
 	"version": "0.0.0",
 	"type": "module",
+	"proxy": "http://localhost:4000",
 	"scripts": {
 		"dev": "vite",
 		"build": "vite build",
 		"lint": "eslint .",
-		"preview": "vite preview"
+		"preview": "vite preview",
+		"start": "vite preview"
 	},
 	"dependencies": {
 		"@reduxjs/toolkit": "^2.4.0",
