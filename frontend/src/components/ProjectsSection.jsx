@@ -1,9 +1,33 @@
-import React from "react";
-import { projects } from "../data/projectsData";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import ReadMore from "../components/ReadMore";
 import "../styles/ProjectsSection.css";
 
 const ProjectsSection = () => {
+	const [projects, setProjects] = useState([]);
+	const [loading, setLoading] = useState(true);
+	const [error, setError] = useState(null);
+
+	useEffect(() => {
+		const fetchProjects = async () => {
+			try {
+				const response = await axios.get(
+					"http://localhost:4000/api/projects"
+				);
+				setProjects(response.data);
+			} catch (error) {
+				setError("Nie udało się pobrać projektów.");
+			} finally {
+				setLoading(false);
+			}
+		};
+
+		fetchProjects();
+	}, []);
+
+	if (loading) return <p>Ładowanie projektów...</p>;
+	if (error) return <p>{error}</p>;
+
 	return (
 		<section className="projects">
 			<h2>Projects</h2>
@@ -12,7 +36,7 @@ const ProjectsSection = () => {
 					<div className="project-content">
 						<h2 className="project-title">{project.title}</h2>
 						<p className="project-technologies">
-							Technologies: {project.technologies.join(", ")}
+							Technologies: {project.technologies}
 						</p>
 						<ReadMore
 							text={project.description}
