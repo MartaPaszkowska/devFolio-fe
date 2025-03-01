@@ -1,11 +1,11 @@
-const express = require("express");
-const logger = require("morgan");
-const cors = require("cors");
+import express from "express";
+import logger from "morgan";
+import cors from "cors";
 
-require("dotenv").config();
+import "dotenv/config";
 
-const projectsRoutes = require("./routes/api/projects.js");
-const connectDB = require("./data-db.js");
+import projectsRoutes from "./routes/api/projects.js";
+import connectDB from "./data-db.js";
 
 const app = express();
 
@@ -29,4 +29,4 @@ app.use((err, req, res, next) => {
 
 connectDB();
 
-module.exports = app;
+export default app;

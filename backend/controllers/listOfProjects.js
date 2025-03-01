@@ -1,4 +1,4 @@
-const Project = require("../models/projectSchema.js");
+import Project from "../models/projectSchema.js";
 
 async function listOfProjects() {
 	try {
@@ -10,4 +10,4 @@ async function listOfProjects() {
 	}
 }
 
-module.exports = listOfProjects;
+export default listOfProjects;

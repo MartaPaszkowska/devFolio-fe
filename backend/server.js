@@ -1,5 +1,8 @@
-const app = require("./app");
+import "dotenv/config";
+import app from "./app.js";
 
-app.listen(4000, () => {
-	console.log("Server running. Use our API on port: 4000");
-});
+(async () => {
+	app.listen(4000, () => {
+		console.log("Server running. Use our API on port: 4000");
+	});
+})();
