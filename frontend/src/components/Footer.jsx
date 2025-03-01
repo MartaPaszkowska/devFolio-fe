@@ -41,7 +41,7 @@ const Footer = () => {
 
 			<div className="footer-bottom">
 				<p>
-					© 2025 Devfolio. All rights reserved. Developted by Marta
+					© 2025 Devfolio. All rights reserved. Developted by Marta J
 					Paszkowska
 				</p>
 			</div>
