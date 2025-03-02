@@ -11,9 +11,7 @@ const ProjectsSection = () => {
 	useEffect(() => {
 		const fetchProjects = async () => {
 			try {
-				const response = await axios.get(
-					"http://localhost:4000/api/projects"
-				);
+				const response = await axios.get(`${API_URL}/api/projects`);
 				setProjects(response.data);
 			} catch (error) {
 				setError("Nie udało się pobrać projektów.");
