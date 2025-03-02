@@ -1,25 +1,40 @@
-name: Build and deploy to GitHub Pages
+name: Deploy Application
 
 on:
     push:
-        branches: [main]
+        branches:
+            - main
 
 jobs:
-    build-and-deploy:
+    deploy:
         runs-on: ubuntu-latest
-        steps:
-            - name: Checkout 🛎️
-              uses: actions/checkout@v2.3.1
 
-            - name: Install, lint, build 🔧
+        steps:
+            - name: Pobierz kod z repozytorium
+              uses: actions/checkout@v3
+
+            - name: Skonfiguruj Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 18
+
+            - name: Instalacja zależności w backendzie
               run: |
-                  cd Frontend
+                  cd backend
                   npm install
 
+            - name: Wdróż backend na Render/Heroku (jeśli używasz)
+              run: |
+                  cd backend
+                  npm run deploy  # zmień to na komendę wymaganą do wdrożenia
+
+            - name: Instalacja zależności w frontendzie
+              run: |
+                  cd frontend
+                  npm install
                   npm run build
 
-            - name: Deploy 🚀
-              uses: JamesIves/github-pages-deploy-action@4.1.0
-              with:
-                  branch: gh-pages
-                  folder: Frontend/build
+            - name: Wdróż frontend na GitHub Pages/Vercel/Netlify
+              run: |
+                  cd frontend
+                  npm run deploy  # zmień na odpowiednią komendę
