@@ -11,6 +11,7 @@ const ProjectsSection = () => {
 	useEffect(() => {
 		const fetchProjects = async () => {
 			try {
+				const API_URL = import.meta.env.VITE_API_URL;
 				const response = await axios.get(`${API_URL}/api/projects`);
 				setProjects(response.data);
 			} catch (error) {
