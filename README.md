@@ -16,13 +16,14 @@ You are NOT allowed to copy, modify, distribute, or use this project in any way 
 ## 🚀 Live Demo
 
 The project is deployed and available at:  
-🔗 **[devFolio.com](https://my-website-sage-five.vercel.app/)**
+🔗 **[devFolio.com](https://dev-folio-fe.vercel.app/)**
 
 ---
 
 ## 🔗 Useful Links
 
--   [🔗 GitHub Repository](https://github.com/MartaPaszkowska/my-website)
+-   [🔗 GitHub Repository Frontend](https://github.com/MartaPaszkowska/devFolio-fe)
+-   [🔗 GitHub Repository Backend](https://github.com/MartaPaszkowska/devFolio-be)
 
 ---
 

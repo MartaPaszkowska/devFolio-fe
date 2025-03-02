@@ -6,10 +6,11 @@ import ProjectsSection from "../components/ProjectsSection";
 import DesignerSection from "../components/DesignerSection";
 import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
+import "../styles/main.css";
 
 function HomePage() {
 	return (
-		<>
+		<div className="container">
 			<section>
 				<Header />
 			</section>
@@ -34,7 +35,7 @@ function HomePage() {
 			<section>
 				<Footer />
 			</section>
-		</>
+		</div>
 	);
 }
 
