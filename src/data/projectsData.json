@@ -24,18 +24,10 @@
 		"image": "https://res.cloudinary.com/dtjbopwfa/image/upload/v1740935970/webStudioImages_c3wp50.png"
 	},
 	{
-		"title": "Projekt  Wallet",
-		"technologies": "HTML5, CSS, JavaScript, React, Redux, Node.js, Express, MongoDB, JWT",
-		"description": "",
-		"liveLink": "",
-		"githubLink": "",
-		"image": ""
-	},{
 		"title": "DevFolio",
-		"technologies": "HTML5, CSS, JavaScript, React, Redux, Node.js, Express, MongoDB, Postman",
-		"description": "",
-		"liveLink": "",
-		"githubLink": "",
+		"technologies": "HTML5, CSS, JavaScript, React, Redux, Node.js, Express.js, API, MongoDB, Postman",
+		"description": "DevFolio is a modern portfolio that showcases my skills and experience as a Full-Stack Developer. It was designed as an interactive and contemporary space where potential clients and employers can explore my work. The project consists of both frontend and backend, ensuring a dynamic and data-driven user experience.The frontend was built using React.js, providing a modern and responsive user interface that adapts to various devices. The project focuses on accessibility, interactive animations, and a clear content structure that effectively presents my projects, skills, and career path. The frontend communicates with the backend via an API to dynamically fetch and update data.The backend, developed with Node.js and Express.js, is responsible for securely storing data in MongoDB. The API is designed to be scalable and efficient, allowing for seamless integration of new features in the future.",
+		"githubLink": "https://github.com/MartaPaszkowska/devFolio-fe",
 		"image": "https://res.cloudinary.com/dtjbopwfa/image/upload/v1740937723/devFolioImage_upqgwk.png"
 	}
 ]

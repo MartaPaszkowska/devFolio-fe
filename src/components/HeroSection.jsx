@@ -2,7 +2,6 @@ import { HashLink } from "react-router-hash-link";
 import "../styles/HeroSection.css";
 import profileImage from "../assets/images/CVzdjecie.jpg";
 import reactIcon from "../assets/svg/technologis/reactIcon.svg";
-import resumeFile from "../assets/pdf/Marta_PaszkowskaCV_-_PL.pdf";
 import scrollIcon from "../assets/svg/arrow-down.svg";
 
 const HeroSection = ({ onClose }) => {
@@ -27,8 +26,14 @@ const HeroSection = ({ onClose }) => {
 					For Designer
 				</HashLink>
 
-				<a href={resumeFile} download className="hero-button">
-					Download Resume
+				<a
+					href="https://drive.google.com/file/d/13vhRTYQJIbMMiPU4ZA_0uZn5a8iaSjre/view?usp=drive_link"
+					download
+					className="hero-button"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					Resume
 				</a>
 			</div>
 			<div className="scroll">
