@@ -2,6 +2,7 @@ import "../styles/ContactSection.css";
 import locationIcon from "../assets/svg/location.svg";
 import envelopeIcon from "../assets/svg/envelope.svg";
 import whatsAppIcon from "../assets/svg/whatsapp.svg";
+import hendSetIcon from "../assets/svg/handset.svg";
 import emailjs from "@emailjs/browser";
 import React, { useRef } from "react";
 
@@ -48,8 +49,16 @@ const ContactSection = () => {
 						</p>
 						<p>
 							<img
+								src={locationIcon}
+								alt="location"
+								className="contact-icon"
+							/>
+							Zurich, Switzerland
+						</p>
+						<p>
+							<img
 								src={envelopeIcon}
-								alt="phone"
+								alt="envelope"
 								className="contact-icon"
 							/>
 							<a href="mailto:marta.j.paszkowska@gmail.com">
@@ -63,6 +72,14 @@ const ContactSection = () => {
 								className="contact-icon"
 							/>
 							<a href="tel:+48513964028">+48 513 964 028</a>
+						</p>
+						<p>
+							<img
+								src={hendSetIcon}
+								alt="hendSet"
+								className="contact-icon"
+							/>
+							<a href="tel:+41764971888">+41 76 497 18 88</a>
 						</p>
 					</address>
 				</div>

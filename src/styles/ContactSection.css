@@ -61,8 +61,13 @@
 	width: 100%;
 	resize: none;
 }
+@media (max-width: 768px) {
+	.contact textarea {
+		height: 120px;
+	}
+}
 .contact textarea {
-	height: 150px;
+	height: 195px;
 }
 .contact button {
 	padding: 10px;
@@ -80,7 +85,6 @@
 	color: var(--baseColor);
 }
 
-/* Układ kolumnowy na urządzeniach mobilnych */
 @media (max-width: 768px) {
 	.contact-content {
 		flex-direction: column;
