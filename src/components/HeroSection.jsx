@@ -11,7 +11,9 @@ const HeroSection = ({ onClose }) => {
 				<div className="image-glow"></div>
 				<img src={profileImage} alt="Marta" className="hero-image" />
 			</div>
-			<p>Hello World!</p>
+			<div className="hello-world-container">
+				<p className="hello-world">Hello World!</p>
+			</div>
 			<h1>
 				My name is Marta.<br></br> I'm a developer specializing in{" "}
 				<img src={reactIcon} alt="React" /> React.

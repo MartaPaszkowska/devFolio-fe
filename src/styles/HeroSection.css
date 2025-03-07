@@ -22,6 +22,25 @@
 	position: relative;
 	z-index: 1;
 }
+.hello-world-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.hello-world {
+	font-family: monospace;
+	white-space: nowrap;
+	overflow: hidden;
+	width: 20ch;
+	animation: typing 2s steps(20) infinite alternate-reverse;
+}
+@keyframes typing {
+	from {
+		width: 0ch;
+	}
+}
 
 /* Poświata za zdjęciem */
 .image-glow {
