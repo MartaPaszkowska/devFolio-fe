@@ -15,7 +15,7 @@ const ProjectsSection = () => {
 				const response = await axios.get(`${API_URL}/api/projects`);
 				setProjects(response.data);
 			} catch (error) {
-				setError("Nie udało się pobrać projektów.");
+				setError("Failed to download projects.");
 			} finally {
 				setLoading(false);
 			}
@@ -24,14 +24,25 @@ const ProjectsSection = () => {
 		fetchProjects();
 	}, []);
 
-	if (loading) return <p>Ładowanie projektów...</p>;
+	if (loading)
+		return (
+			<div className="loading-container">
+				<div className="spinner"></div>
+				<p className="loading-text">Loading projects...</p>
+			</div>
+		);
 	if (error) return <p>{error}</p>;
 
 	return (
 		<section className="projects">
 			<h2>Projects</h2>
 			{projects.map((project, index) => (
-				<div key={index} className="project-item">
+				<div
+					key={index}
+					className={`project-item ${
+						index % 2 === 0 ? "slide-in-left" : "slide-in-right"
+					}`}
+				>
 					<div className="project-content">
 						<h2 className="project-title">{project.title}</h2>
 						<p className="project-technologies">

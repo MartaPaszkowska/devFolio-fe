@@ -16,7 +16,7 @@ const HeroSection = ({ onClose }) => {
 			</div>
 			<h1>
 				My name is Marta.<br></br> I'm a developer specializing in{" "}
-				<img src={reactIcon} alt="React" /> React.
+				<img src={reactIcon} alt="React" /> React.js
 			</h1>
 			<div className="buttons">
 				<HashLink

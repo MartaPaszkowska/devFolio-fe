@@ -2,7 +2,7 @@ import "../styles/ContactSection.css";
 import locationIcon from "../assets/svg/location.svg";
 import envelopeIcon from "../assets/svg/envelope.svg";
 import whatsAppIcon from "../assets/svg/whatsapp.svg";
-import hendSetIcon from "../assets/svg/handset.svg";
+import hendSetIcon from "../assets/svg/telephone.svg";
 import emailjs from "@emailjs/browser";
 import React, { useRef } from "react";
 

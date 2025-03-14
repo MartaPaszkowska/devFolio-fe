@@ -1,3 +1,36 @@
+.loading-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	text-align: center;
+}
+
+.loading-text {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: white;
+	margin-top: 10px;
+}
+
+.spinner {
+	width: 50px;
+	height: 50px;
+	border: 5px solid rgba(255, 255, 255, 0.3);
+	border-top: 5px solid white;
+	border-radius: 50%;
+	animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
 .projects {
 	display: flex;
 	flex-direction: column;
@@ -22,6 +55,40 @@
 	color: #fff;
 	max-width: 100%;
 	text-align: left;
+	position: relative;
+	opacity: 0;
+}
+
+.project-item.slide-in-left {
+	transform: translateX(-100%);
+	animation: slideInLeft 3s forwards;
+}
+
+.project-item.slide-in-right {
+	transform: translateX(100%);
+	animation: slideInRight 3s forwards;
+}
+
+@keyframes slideInLeft {
+	from {
+		opacity: 0;
+		transform: translateX(-100%);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes slideInRight {
+	from {
+		opacity: 0;
+		transform: translateX(100%);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
 }
 
 .project-content {
