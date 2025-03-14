@@ -31,6 +31,7 @@
 		transform: rotate(360deg);
 	}
 }
+
 .projects {
 	display: flex;
 	flex-direction: column;
@@ -40,10 +41,13 @@
 	background-color: #000;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 .projects h2 {
 	font-size: 1.8rem;
 	font-weight: 400;
 }
+
+/* ✅ Rezerwowanie miejsca dla każdego projektu, aby uniknąć przeskoków */
 .project-item {
 	display: flex;
 	justify-content: space-between;
@@ -57,17 +61,19 @@
 	text-align: left;
 	position: relative;
 	opacity: 0;
+	min-height: 300px; /* Kluczowy element - rezerwuje miejsce */
 }
 
+/* ✅ Animacja tylko dla komputerów (powyżej 768px) */
 @media (min-width: 769px) {
 	.project-item.slide-in-left {
 		transform: translateX(-100%);
-		animation: slideInLeft 3s forwards;
+		animation: slideInLeft 1s forwards ease-out;
 	}
 
 	.project-item.slide-in-right {
 		transform: translateX(100%);
-		animation: slideInRight 3s forwards;
+		animation: slideInRight 1s forwards ease-out;
 	}
 
 	@keyframes slideInLeft {
@@ -93,6 +99,7 @@
 	}
 }
 
+/* ✅ Treść projektu */
 .project-content {
 	flex: 1;
 	display: flex;
@@ -119,6 +126,7 @@
 	margin-bottom: 20px;
 }
 
+/* ✅ Linki do projektów */
 .project-links {
 	display: flex;
 	gap: 15px;
@@ -135,6 +143,7 @@
 	text-align: center;
 }
 
+/* ✅ Obrazek projektu */
 .project-image {
 	width: auto;
 	height: 300px;
@@ -142,16 +151,18 @@
 	object-fit: cover;
 }
 
+/* ✅ Wyłączenie animacji na mobile/tablet */
 @media (max-width: 768px) {
-	.project-title
-		.project-link
-		.project-description
-		.project-technologies
-		.project-content
-		.project-item {
+	.project-title,
+	.project-link,
+	.project-description,
+	.project-technologies,
+	.project-content,
+	.project-item {
 		flex-direction: column;
 		text-align: center;
 	}
+
 	.project-item {
 		opacity: 1;
 		transform: translateX(0);
