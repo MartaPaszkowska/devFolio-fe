@@ -5,7 +5,6 @@
 	color: var(--gray);
 }
 
-/* Kontener dla zdjęcia i poświaty */
 .hero-image-container {
 	position: relative;
 	display: inline-block;
@@ -13,7 +12,6 @@
 	height: 170px;
 }
 
-/* Styl dla zdjęcia */
 .hero-image {
 	width: 150px;
 	height: 150px;
@@ -42,7 +40,6 @@
 	}
 }
 
-/* Poświata za zdjęciem */
 .image-glow {
 	position: absolute;
 	top: 0px;
@@ -72,8 +69,6 @@
 	gap: 20px;
 }
 
-/* Styl dla przycisków */
-
 .hero-button {
 	display: flex;
 	align-items: center;
@@ -89,7 +84,6 @@
 	font-weight: 600;
 }
 
-/* Sekcja scroll */
 .scroll {
 	margin-top: 40px;
 	position: relative;
@@ -101,7 +95,6 @@
 	animation: bounceArrow 1.5s infinite ease-in-out;
 }
 
-/* Animacja skakania strzałki */
 @keyframes bounceArrow {
 	0%,
 	100% {

@@ -39,7 +39,6 @@
 	color: var(--gray);
 }
 
-/* Styl dla ekranów mobilnych */
 @media (max-width: 768px) {
 	.footer-top {
 		flex-direction: column;

@@ -47,7 +47,6 @@
 	font-weight: 400;
 }
 
-/* ✅ Rezerwowanie miejsca dla każdego projektu, aby uniknąć przeskoków */
 .project-item {
 	display: flex;
 	justify-content: space-between;
@@ -61,10 +60,9 @@
 	text-align: left;
 	position: relative;
 	opacity: 0;
-	min-height: 300px; /* Kluczowy element - rezerwuje miejsce */
+	min-height: 300px;
 }
 
-/* ✅ Animacja tylko dla komputerów (powyżej 768px) */
 @media (min-width: 769px) {
 	.project-item.slide-in-left {
 		transform: translateX(-100%);
@@ -99,7 +97,6 @@
 	}
 }
 
-/* ✅ Treść projektu */
 .project-content {
 	flex: 1;
 	display: flex;
@@ -126,7 +123,6 @@
 	margin-bottom: 20px;
 }
 
-/* ✅ Linki do projektów */
 .project-links {
 	display: flex;
 	gap: 15px;
@@ -143,7 +139,6 @@
 	text-align: center;
 }
 
-/* ✅ Obrazek projektu */
 .project-image {
 	width: auto;
 	height: 300px;
@@ -151,7 +146,6 @@
 	object-fit: cover;
 }
 
-/* ✅ Wyłączenie animacji na mobile/tablet */
 @media (max-width: 768px) {
 	.project-title,
 	.project-link,

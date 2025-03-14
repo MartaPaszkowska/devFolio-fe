@@ -42,7 +42,6 @@ html {
 	padding: 20px;
 }
 
-/* MEDIA QUERIES - dostosowanie dla mniejszych ekranów */
 @media (max-width: 1024px) {
 	.container {
 		max-width: 90%;

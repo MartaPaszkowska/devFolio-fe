@@ -2,17 +2,16 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background-color: rgba(0, 0, 0, 0.9); /* Lekko zwiększona przezroczystość */
+	background-color: rgba(0, 0, 0, 0.9);
 	padding: 15px 50px;
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: 100%; /* ✅ Pełna szerokość, zamiast `max-width` */
+	width: 100%;
 	z-index: 1000;
-	height: 70px; /* ✅ Lekko zwiększona wysokość dla lepszej widoczności */
+	height: 70px;
 }
 
-/* Logo */
 .logo {
 	font-size: 2rem;
 	font-weight: bold;
@@ -28,14 +27,12 @@
 	color: var(--baseColor);
 }
 
-/* Nawigacja */
 .nav {
 	display: flex;
 	align-items: center;
-	gap: 50px; /* ✅ Zmniejszony odstęp */
+	gap: 50px;
 }
 
-/* Linki */
 .nav-a {
 	color: var(--gray);
 	text-decoration: none;
@@ -44,7 +41,6 @@
 	transition: color 0.3s;
 }
 
-/* Kropka pod linkiem */
 .nav-a::after {
 	content: "";
 	position: absolute;
@@ -81,12 +77,10 @@
 	color: var(--baseColor);
 }
 
-/* ✅ Dodano padding-top do body, żeby header nie zakrywał treści */
 body {
-	padding-top: 80px; /* ✅ Zapewnia odstęp, aby header nie nachodził na sekcje */
+	padding-top: 80px;
 }
 
-/* Przycisk menu na mobile */
 .menu-button {
 	display: none;
 	background: none;
@@ -94,7 +88,6 @@ body {
 	cursor: pointer;
 }
 
-/* ✅ Poprawiona wersja dla tabletów i mobilnych */
 @media (max-width: 1024px) {
 	.nav {
 		display: none;
