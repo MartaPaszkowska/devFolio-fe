@@ -59,35 +59,37 @@
 	opacity: 0;
 }
 
-.project-item.slide-in-left {
-	transform: translateX(-100%);
-	animation: slideInLeft 3s forwards;
-}
-
-.project-item.slide-in-right {
-	transform: translateX(100%);
-	animation: slideInRight 3s forwards;
-}
-
-@keyframes slideInLeft {
-	from {
-		opacity: 0;
+@media (min-width: 769px) {
+	.project-item.slide-in-left {
 		transform: translateX(-100%);
+		animation: slideInLeft 3s forwards;
 	}
-	to {
-		opacity: 1;
-		transform: translateX(0);
-	}
-}
 
-@keyframes slideInRight {
-	from {
-		opacity: 0;
+	.project-item.slide-in-right {
 		transform: translateX(100%);
+		animation: slideInRight 3s forwards;
 	}
-	to {
-		opacity: 1;
-		transform: translateX(0);
+
+	@keyframes slideInLeft {
+		from {
+			opacity: 0;
+			transform: translateX(-100%);
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+
+	@keyframes slideInRight {
+		from {
+			opacity: 0;
+			transform: translateX(100%);
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0);
+		}
 	}
 }
 
@@ -147,6 +149,12 @@
 		.project-technologies
 		.project-content
 		.project-item {
+		flex-direction: column;
+		text-align: center;
+	}
+	.project-item {
+		opacity: 1;
+		transform: translateX(0);
 		flex-direction: column;
 		text-align: center;
 	}

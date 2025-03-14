@@ -1,89 +1,129 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import ReadMore from "../components/ReadMore";
-import "../styles/ProjectsSection.css";
+import "../styles/ContactSection.css";
+import locationIcon from "../assets/svg/location.svg";
+import envelopeIcon from "../assets/svg/envelope.svg";
+import whatsAppIcon from "../assets/svg/whatsapp.svg";
+import hendSetIcon from "../assets/svg/telephone.svg";
+import emailjs from "@emailjs/browser";
+import React, { useRef } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-const ProjectsSection = () => {
-	const [projects, setProjects] = useState([]);
-	const [loading, setLoading] = useState(true);
-	const [error, setError] = useState(null);
+const ContactSection = () => {
+	const form = useRef();
 
-	useEffect(() => {
-		const fetchProjects = async () => {
-			try {
-				const API_URL = import.meta.env.VITE_API_URL;
-				const response = await axios.get(`${API_URL}/api/projects`);
-				setProjects(response.data);
-			} catch (error) {
-				setError("Nie udało się pobrać projektów.");
-			} finally {
-				setLoading(false);
+	const sendEmail = (e) => {
+		e.preventDefault();
+
+		const serviceId = import.meta.env.VITE_REACT_APP_SERVICE_ID;
+		const templateId = import.meta.env.VITE_REACT_APP_TEMPLATE_ID;
+		const publicKey = import.meta.env.VITE_REACT_APP_PUBLIC_KEY;
+
+		emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
+			() => {
+				toast.success("✅ Your message has been sent!", {
+					position: "top-right",
+					autoClose: 3000,
+					hideProgressBar: false,
+					closeOnClick: true,
+					pauseOnHover: true,
+					draggable: true,
+				});
+			},
+			(error) => {
+				console.error("FAILED...", error.text);
+				toast.error("❌ Error sending message. Try again!", {
+					position: "top-right",
+					autoClose: 3000,
+					hideProgressBar: false,
+					closeOnClick: true,
+					pauseOnHover: true,
+					draggable: true,
+				});
 			}
-		};
-
-		fetchProjects();
-	}, []);
-
-	if (loading)
-		return (
-			<div className="loading-container">
-				<div className="spinner"></div>
-				<p className="loading-text">Ładowanie projektów...</p>
-			</div>
 		);
-
-	if (error) return <p>{error}</p>;
+		form.current.reset();
+	};
 
 	return (
-		<section className="projects">
-			<h2>Projects</h2>
-			{projects.map((project, index) => (
-				<div
-					key={index}
-					className={`project-item ${
-						index % 2 === 0 ? "slide-in-left" : "slide-in-right"
-					}`}
-				>
-					<div className="project-content">
-						<h2 className="project-title">{project.title}</h2>
-						<p className="project-technologies">
-							Technologies: {project.technologies}
+		<section className="contact">
+			<div className="contact-content">
+				<div className="contact-text">
+					<h2>Get in touch</h2>
+					<p className="contact-description">
+						Drop me a line, give me a call, or send me a message by
+						submitting the form.
+					</p>
+
+					<address>
+						<p>
+							<img
+								src={locationIcon}
+								alt="location"
+								className="contact-icon"
+							/>
+							Wrocław, Poland
 						</p>
-						<ReadMore
-							text={project.description}
-							maxLength={150}
-							className="project-description"
-						/>
-						<div className="project-links">
-							<a
-								href={project.liveLink}
-								target="_blank"
-								rel="noopener noreferrer"
-								className="project-link"
-							>
-								Live version
+						<p>
+							<img
+								src={locationIcon}
+								alt="location"
+								className="contact-icon"
+							/>
+							Zurich, Switzerland
+						</p>
+						<p>
+							<img
+								src={envelopeIcon}
+								alt="envelope"
+								className="contact-icon"
+							/>
+							<a href="mailto:marta.j.paszkowska@gmail.com">
+								marta.j.paszkowska@gmail.com
 							</a>
-							<a
-								href={project.githubLink}
-								target="_blank"
-								rel="noopener noreferrer"
-								className="project-link"
-							>
-								GitHub
-							</a>
-						</div>
-					</div>
-					<img
-						src={project.image}
-						alt={project.title}
-						className="project-image"
-						loading="lazy"
-						referrerPolicy="no-referrer"
-					/>
+						</p>
+						<p>
+							<img
+								src={whatsAppIcon}
+								alt="whatsApp"
+								className="contact-icon"
+							/>
+							<a href="tel:+48513964028">+48 513 964 028</a>
+						</p>
+						<p>
+							<img
+								src={hendSetIcon}
+								alt="hendSet"
+								className="contact-icon"
+							/>
+							<a href="tel:+41764971888">+41 76 497 18 88</a>
+						</p>
+					</address>
 				</div>
-			))}
+
+				<form onSubmit={sendEmail} ref={form} className="contact-form">
+					<input
+						type="text"
+						placeholder="Your Name"
+						name="from_name"
+						required
+					/>
+					<input
+						type="email"
+						placeholder="Your Email"
+						name="from_email"
+						required
+					/>
+					<textarea
+						placeholder="Your Message"
+						name="message"
+						required
+					></textarea>
+					<button type="submit">Send Message</button>
+				</form>
+			</div>
+			<ToastContainer />
 		</section>
 	);
 };
 
-export default ProjectsSection;
+export default ContactSection;

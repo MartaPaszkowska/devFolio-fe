@@ -1,0 +1,18 @@
+.custom-toast {
+	background-color: var(--baseColor) !important;
+	color: #fff !important;
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.custom-toast-error {
+	background-color: #ff0000 !important;
+	color: #fff !important;
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+}
+.custom-toast-progress {
+	background-color: white !important;
+}

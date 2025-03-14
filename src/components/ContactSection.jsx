@@ -1,10 +1,13 @@
 import "../styles/ContactSection.css";
+import "../styles/ToastStyles.css";
 import locationIcon from "../assets/svg/location.svg";
 import envelopeIcon from "../assets/svg/envelope.svg";
 import whatsAppIcon from "../assets/svg/whatsapp.svg";
 import hendSetIcon from "../assets/svg/telephone.svg";
 import emailjs from "@emailjs/browser";
 import React, { useRef } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ContactSection = () => {
 	const form = useRef();
@@ -18,11 +21,31 @@ const ContactSection = () => {
 
 		emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
 			() => {
-				alert("Your message has been sent!");
+				toast.success("✔  Your message has been sent!", {
+					position: "top-center",
+					autoClose: 3000,
+					icon: false,
+					hideProgressBar: false,
+					closeOnClick: true,
+					pauseOnHover: true,
+					draggable: true,
+					className: "custom-toast",
+					progressClassName: "custom-toast-progress",
+				});
 			},
 			(error) => {
 				console.error("FAILED...", error.text);
-				alert("Error sending message. Please try again.");
+				toast.error("✖  Error sending message. Call me!", {
+					position: "top-center",
+					autoClose: 3000,
+					icon: false,
+					hideProgressBar: false,
+					closeOnClick: true,
+					pauseOnHover: true,
+					draggable: true,
+					className: "custom-toast-error",
+					progressClassName: "custom-toast-progress",
+				});
 			}
 		);
 		form.current.reset();
@@ -102,11 +125,10 @@ const ContactSection = () => {
 						name="message"
 						required
 					></textarea>
-					<button type="submit" value="Send">
-						Send Message
-					</button>
+					<button type="submit">Send Message</button>
 				</form>
 			</div>
+			<ToastContainer />
 		</section>
 	);
 };
