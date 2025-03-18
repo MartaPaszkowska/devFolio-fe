@@ -8,7 +8,7 @@ import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
 import "../styles/main.css";
 
-function HomePage() {
+const HomePage = () => {
 	return (
 		<div className="container">
 			<section>
@@ -37,6 +37,6 @@ function HomePage() {
 			</section>
 		</div>
 	);
-}
+};
 
 export default HomePage;
