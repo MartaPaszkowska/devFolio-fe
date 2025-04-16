@@ -58,7 +58,7 @@
 	background-color: black;
 	color: white;
 	border-radius: 5px;
-	width: 100%;
+	width: 300px;
 	resize: none;
 }
 @media (max-width: 768px) {
