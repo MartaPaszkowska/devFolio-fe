@@ -78,6 +78,7 @@
 	border-radius: 5px;
 	font-weight: bold;
 	transition: background 0.3s;
+	width: 300px;
 }
 
 .contact button:hover {
